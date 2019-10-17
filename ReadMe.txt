@@ -1,3 +1,9 @@
+# TIMLink 技術検証
+○ GPS取得
+○ オフライン処理
+○ バックグラウンド処理
+○ プッシュ通知
+
 # Git Hub IO Webサイト構築
 ※ 参考サイト：https://techacademy.jp/magazine/6445
   -> 今回はユーザーサイト用
@@ -26,6 +32,5 @@ $ git pull
 $ git remote set-url origin https://tomisho53@github.com/tomisho53/tomisho53.github.io
 	- tomisho53@　を追加
 	- push時にパスワード入力
-
 
 http://tomisho53.github.io
