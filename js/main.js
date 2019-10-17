@@ -25,9 +25,9 @@
 
                       // 接続状態設定
                       if (navigator.onLine){
-                        document.getElementById('syncstatus').innerText = 'online';
+                        document.getElementById('syncstate').innerText = 'online';
                       }else{
-                        document.getElementById('syncstatus').innerText = 'offline';
+                        document.getElementById('syncstate').innerText = 'offline';
                       }
                     })
                     .catch(console.error.bind(console));
@@ -43,9 +43,9 @@
 
                       // 接続状態設定
                       if (navigator.onLine){
-                        document.getElementById('syncstatus').innerText = 'online';
+                        document.getElementById('syncstate').innerText = 'online';
                       }else{
-                        document.getElementById('syncstatus').innerText = 'offline';
+                        document.getElementById('syncstate').innerText = 'offline';
                       }
                     })
                     .catch(console.error.bind(console));
