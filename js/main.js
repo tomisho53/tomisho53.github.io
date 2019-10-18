@@ -1,26 +1,20 @@
 {
   'use strict'
 
-  var timerid;
-  var timeadd = function(){
-    //時刻データを取得して変数jikanに格納する
-    var jikan= new Date();
-
-    //時・分・秒を取得する
-    var hour = jikan.getHours();
-    var minute = jikan.getMinutes();
-    var second = jikan.getSeconds();
-
-    var elemLi = document.createElement('li'); 
-    elemLi.innerHTML = hour+"時" + minute + "分" + second + "秒";
-
-    console.log(elemLi);
-
-    document.getElementById('timerlist').appendChild(elemLi);
-
-  } 
-
-  timerid = setInterval(timeadd, 1000);
+  // var timerid;
+  // var timeadd = function(){
+  //   //時刻データを取得して変数jikanに格納する
+  //   var jikan= new Date();
+  //   //時・分・秒を取得する
+  //   var hour = jikan.getHours();
+  //   var minute = jikan.getMinutes();
+  //   var second = jikan.getSeconds();
+  //   var elemLi = document.createElement('li'); 
+  //   elemLi.innerHTML = hour+"時" + minute + "分" + second + "秒";
+  //   console.log(elemLi);
+  //   document.getElementById('timerlist').appendChild(elemLi);
+  // } 
+  // timerid = setInterval(timeadd, 1000);
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('../serviceworker.js').then(function(registration) {
@@ -93,17 +87,17 @@
                     .catch(console.error.bind(console));
                 }, false);
 
-                // TimerStart
-                document.getElementById('timerstart').addEventListener('click', () => {
-                  // timeadd();
-                  // timerid = setInterval(timeadd, 1000);
-                  // console.log(timerid);
-                }, false);
+                // // TimerStart
+                // document.getElementById('timerstart').addEventListener('click', () => {
+                //   // timeadd();
+                //   // timerid = setInterval(timeadd, 1000);
+                //   // console.log(timerid);
+                // }, false);
 
-                // TimerStop
-                document.getElementById('timerstart').addEventListener('click', () => {
-                  // clearTimeout(timerid);
-                }, false);
+                // // TimerStop
+                // document.getElementById('timerstart').addEventListener('click', () => {
+                //   // clearTimeout(timerid);
+                // }, false);
                 
       }).catch(console.error.bind(console));
 
