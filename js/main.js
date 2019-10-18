@@ -93,6 +93,7 @@
 
                 // TimerStart
                 document.getElementById('timerstart').addEventListener('click', () => {
+                  timeadd();
                   timerid = setInterval(timeadd, 1000);
                   console.log(timerid);
                 }, false);
