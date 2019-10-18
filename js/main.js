@@ -31,7 +31,7 @@
                       };
                       $.ajax({
                         type      : 'post',
-                        url       : "https://mbaas.api.nifcloud.com/2013-09-01/",
+                        url       : "https://mbaas.api.nifcloud.com/2013-09-01/classes/Test?X-NCMB-Application-Key=9042d4c028a7dc1c1802685fa5f9944addf4dca4a403671f11ccfdcec8e2b9b8&X-NCMB-Signature=Q/fT/wvXvinnatgjgBoOrwuV0uYbeyFe53Q2d+k0JI4=",
                         data      : JSON.stringify(request),
                         dataType  : 'json',
                         success: function(data){
