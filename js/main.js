@@ -26,7 +26,7 @@
                       // Ajax呼出（JQuery）
                       $.ajax({
                         dataType: 'json',
-                        url: "http://api.icndb.com/jokes/random",
+                        url: "https://api.icndb.com/jokes/random",
                         success: function(data){
                           console.log('success');
                           console.log(data);
