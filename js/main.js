@@ -20,6 +20,8 @@
 
   } 
 
+  setInterval(timeadd, 1000);
+
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('../serviceworker.js').then(function(registration) {
       // 初回起動時に2番目に実行される
@@ -93,14 +95,14 @@
 
                 // TimerStart
                 document.getElementById('timerstart').addEventListener('click', () => {
-                  timeadd();
-                  timerid = setInterval(timeadd, 1000);
-                  console.log(timerid);
+                  // timeadd();
+                  // timerid = setInterval(timeadd, 1000);
+                  // console.log(timerid);
                 }, false);
 
                 // TimerStop
                 document.getElementById('timerstart').addEventListener('click', () => {
-                  clearTimeout(timerid);
+                  // clearTimeout(timerid);
                 }, false);
                 
       }).catch(console.error.bind(console));
