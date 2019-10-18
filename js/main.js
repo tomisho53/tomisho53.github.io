@@ -1,6 +1,7 @@
 {
   'use strict'
 
+  let timerid;
   var timeadd = function(){
     //時刻データを取得して変数jikanに格納する
     var jikan= new Date();
@@ -91,12 +92,12 @@
 
                 // TimerStart
                 document.getElementById('timerstart').addEventListener('click', () => {
-                   timeadd();
+                  timerid = setTimeout(timeadd, 1000);
                 }, false);
 
                 // TimerStop
                 document.getElementById('timerstart').addEventListener('click', () => {
-                   
+                  clearTimeout(timerid);
                 }, false);
                 
       }).catch(console.error.bind(console));
