@@ -10,9 +10,11 @@
     var minute = jikan.getMinutes();
     var second = jikan.getSeconds();
 
-    document.getElementById('timerlist').appendChild(
-      document.createElement('li').innerText = hour+"時" + minute + "分" + second + "秒"
-    );
+    var elemLi = document.createElement('li'); 
+    elemLi.innerText = hour+"時" + minute + "分" + second + "秒";
+
+    document.getElementById('timerlist').appendChild(elemLi);
+    
   } 
 
   if ('serviceWorker' in navigator) {
