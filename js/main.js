@@ -24,9 +24,16 @@
                       console.log('sync1 registerd');
 
                       // Ajax呼出（JQuery）
+                      let request = {
+                        objectId  : 1,
+                        latitude  : 2,
+                        longitude : 3
+                      };
                       $.ajax({
-                        dataType: 'json',
-                        url: "https://api.icndb.com/jokes/random",
+                        type      : 'post',
+                        url       : "https://mbaas.api.nifcloud.com/2013-09-01/",
+                        data      : JSON.stringify(request),
+                        dataType  : 'json',
                         success: function(data){
                           console.log('success');
                           console.log(data);
