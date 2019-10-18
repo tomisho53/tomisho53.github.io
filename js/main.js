@@ -13,6 +13,7 @@
 
     var elemLi = document.createElement('li'); 
     elemLi.innerHTML = hour+"時" + minute + "分" + second + "秒";
+    
     console.log(elemLi);
 
     document.getElementById('timerlist').appendChild(elemLi);
@@ -92,7 +93,7 @@
 
                 // TimerStart
                 document.getElementById('timerstart').addEventListener('click', () => {
-                  timerid = setTimeout('timeadd()', 1000);
+                  timerid = setTimeout(timeadd, 1000);
                   console.log(timerid);
                 }, false);
 
