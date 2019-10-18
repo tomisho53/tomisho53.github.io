@@ -1,6 +1,20 @@
 {
   'use strict'
 
+  var timeadd = function(){
+    //時刻データを取得して変数jikanに格納する
+    var jikan= new Date();
+
+    //時・分・秒を取得する
+    var hour = jikan.getHours();
+    var minute = jikan.getMinutes();
+    var second = jikan.getSeconds();
+
+    document.getElementById('list').appendChild(
+      document.createElement('li').innerText = hour+"時" + minute + "分" + second + "秒"
+    );
+  } 
+
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('../serviceworker.js').then(function(registration) {
       // 初回起動時に2番目に実行される
@@ -23,25 +37,25 @@
                       // sync登録に成功した場合の処理
                       console.log('sync1 registerd');
 
-                      // Ajax呼出（JQuery）
-                      let request = {
-                        objectId  : 1,
-                        latitude  : 2,
-                        longitude : 3
-                      };
-                      $.ajax({
-                        type      : 'get',
-                        url       : "https://mbaas.api.nifcloud.com/2013-09-01/classes/Test?X-NCMB-Application-Key=9042d4c028a7dc1c1802685fa5f9944addf4dca4a403671f11ccfdcec8e2b9b8&X-NCMB-Signature=Q/fT/wvXvinnatgjgBoOrwuV0uYbeyFe53Q2d+k0JI4=",
-                        data      : JSON.stringify(request),
-                        dataType  : 'json',
-                        success: function(data){
-                          console.log('success');
-                          console.log(data);
-                        },
-                        error: function(data){
-                          console.log('error');
-                        }
-                      });
+                      // // Ajax呼出（JQuery）
+                      // let request = {
+                      //   objectId  : 1,
+                      //   latitude  : 2,
+                      //   longitude : 3
+                      // };
+                      // $.ajax({
+                      //   type      : 'post',
+                      //   url       : "https://mbaas.api.nifcloud.com/2013-09-01/classes/Test?X-NCMB-Application-Key=9042d4c028a7dc1c1802685fa5f9944addf4dca4a403671f11ccfdcec8e2b9b8&X-NCMB-Signature=Q/fT/wvXvinnatgjgBoOrwuV0uYbeyFe53Q2d+k0JI4=",
+                      //   data      : JSON.stringify(request),
+                      //   dataType  : 'json',
+                      //   success: function(data){
+                      //     console.log('success');
+                      //     console.log(data);
+                      //   },
+                      //   error: function(data){
+                      //     console.log('error');
+                      //   }
+                      // });
                       
                       // 接続状態設定
                       if (navigator.onLine){
@@ -70,9 +84,22 @@
                     })
                     .catch(console.error.bind(console));
                   }, false);
-                  
                 })
                 .catch(console.error.bind(console));
+
+                // TimerStart
+                document.getElementById('timerstart').addEventListener('click', () => {
+                   timeadd();
+                })
+                .catch(console.error.bind(console));
+
+                // TimerStop
+                document.getElementById('timerstart').addEventListener('click', () => {
+                   
+                })
+                .catch(console.error.bind(console));
+
+
     }).catch(function(err) {
       console.log('ServiceWorker registration failed: ', err);
     });
