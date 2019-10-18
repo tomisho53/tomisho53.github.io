@@ -1,0 +1,18 @@
+# TIMLink 技術検証
+○ GPS取得
+  - geolocation を 使用して可能
+
+○ オフライン処理
+  - Service Worker の 機能で可能
+  - registration.sync.register(タグ名) で処理を登録
+  - self.addEventListener の 'sync' で実際の処理を記載する
+    - 処理の登録後にオンラインであればすぐに 'sync' の処理が実行される
+    - オフラインの場合、オンラインになった後に 'sync' の処理が実行される
+    - タグ名が同一の場合は複数実行されても1回のみの実行となる
+  - オフライン処理は処理登録の前にIndexedDBに登録し、 
+    'sync' で実際に処理されたタイミングでIndexedDBを読込して実施
+
+○ バックグラウンド処理
+  - 
+
+○ プッシュ通知
