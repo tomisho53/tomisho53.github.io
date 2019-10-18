@@ -23,6 +23,19 @@
                       // sync登録に成功した場合の処理
                       console.log('sync1 registerd');
 
+                      // Ajax呼出（JQuery）
+                      $.ajax({
+                        dataType: 'json',
+                        url: "http://api.icndb.com/jokes/random",
+                        success: function(data){
+                          console.log('success');
+                          console.log(data);
+                        },
+                        error: function(data){
+                          console.log('error');
+                        }
+                      });
+                      
                       // 接続状態設定
                       if (navigator.onLine){
                         document.getElementById('syncstate').innerText = 'online';
