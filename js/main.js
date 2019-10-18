@@ -20,7 +20,7 @@
 
   } 
 
-  setInterval(timeadd, 1000);
+  timerid = setInterval(timeadd, 1000);
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('../serviceworker.js').then(function(registration) {
