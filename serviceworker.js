@@ -54,8 +54,6 @@ self.addEventListener("activate", e => {
 // リソースフェッチ処理
 self.addEventListener('fetch', e => {
   // 再読み込み時
-  console.log('fetch');
-  console.log(e);
 
   // キャッシュから取得
   e.respondWith(
