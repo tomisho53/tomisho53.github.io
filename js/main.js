@@ -1,22 +1,8 @@
 {
   'use strict'
 
-  // var timerid;
-  // var timeadd = function(){
-  //   //時刻データを取得して変数jikanに格納する
-  //   var jikan= new Date();
-  //   //時・分・秒を取得する
-  //   var hour = jikan.getHours();
-  //   var minute = jikan.getMinutes();
-  //   var second = jikan.getSeconds();
-  //   var elemLi = document.createElement('li'); 
-  //   elemLi.innerHTML = hour+"時" + minute + "分" + second + "秒";
-  //   console.log(elemLi);
-  //   document.getElementById('timerlist').appendChild(elemLi);
-  // } 
-  // timerid = setInterval(timeadd, 1000);
-
   if ('serviceWorker' in navigator) {
+    // ServiceWorker スクリプトの読込
     navigator.serviceWorker.register('../serviceworker.js').then(function(registration) {
       // 初回起動時に2番目に実行される
       // 初回以降は1番目に実行される
@@ -38,26 +24,6 @@
                     .then(() => {
                       // sync登録に成功した場合の処理
                       console.log('sync1 registerd');
-
-                      // // Ajax呼出（JQuery）
-                      // let request = {
-                      //   objectId  : 1,
-                      //   latitude  : 2,
-                      //   longitude : 3
-                      // };
-                      // $.ajax({
-                      //   type      : 'post',
-                      //   url       : "https://mbaas.api.nifcloud.com/2013-09-01/classes/Test?X-NCMB-Application-Key=9042d4c028a7dc1c1802685fa5f9944addf4dca4a403671f11ccfdcec8e2b9b8&X-NCMB-Signature=Q/fT/wvXvinnatgjgBoOrwuV0uYbeyFe53Q2d+k0JI4=",
-                      //   data      : JSON.stringify(request),
-                      //   dataType  : 'json',
-                      //   success: function(data){
-                      //     console.log('success');
-                      //     console.log(data);
-                      //   },
-                      //   error: function(data){
-                      //     console.log('error');
-                      //   }
-                      // });
                       
                       // 接続状態設定
                       if (navigator.onLine){
@@ -86,18 +52,6 @@
                     })
                     .catch(console.error.bind(console));
                 }, false);
-
-                // // TimerStart
-                // document.getElementById('timerstart').addEventListener('click', () => {
-                //   // timeadd();
-                //   // timerid = setInterval(timeadd, 1000);
-                //   // console.log(timerid);
-                // }, false);
-
-                // // TimerStop
-                // document.getElementById('timerstart').addEventListener('click', () => {
-                //   // clearTimeout(timerid);
-                // }, false);
                 
       }).catch(console.error.bind(console));
 

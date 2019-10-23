@@ -2,6 +2,8 @@
 // 参考:https://murashun.jp/blog/20171210-01.html
 
 var CACHE_NAME = 'pwa-my-study-01';
+// リソースファイル
+// オフラインでも動作するようにローカルに保存する対象
 var urlsToCache = [
   '/',
   '/favicon.ico',
@@ -53,6 +55,7 @@ self.addEventListener("activate", e => {
 self.addEventListener('fetch', e => {
   // 再読み込み時
   console.log('fetch');
+  console.log(e);
 
   // キャッシュから取得
   e.respondWith(
@@ -82,8 +85,7 @@ self.addEventListener('fetch', e => {
                             .then((cache) => {
                               cache.put(e.request, responseToCache);
                             });
-
-                      console.log('fetch 09');
+ 
                       return response;
                     });
           })
