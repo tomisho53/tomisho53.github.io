@@ -10,9 +10,9 @@
       
       // 接続状態設定
       if (navigator.onLine){
-        document.getElementById('syncstate').innerText = 'online';
+        document.getElementById('syncstate').innerText = 'online!!';
       }else{
-        document.getElementById('syncstate').innerText = 'offline';
+        document.getElementById('syncstate').innerText = 'offline!!';
       }
 
       // navigator.serviceWorker.ready -> ServiceWorker が activeになるまでコードの実行を遅らせる
@@ -38,8 +38,14 @@
                       }else{
                         document.getElementById('syncstate').innerText = 'offline';
                       }
-                    })
-                    .catch(console.error.bind(console));
+
+                  // })
+                  // .catch(console.error.bind(console));
+                  }).catch(function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                    document.getElementById('syncstate').innerText = err;
+                  });
+
                 }, false);
 
                 // sync2
