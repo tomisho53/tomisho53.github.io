@@ -2,6 +2,7 @@
   'use strict'
 
   document.getElementById('log').innerText = '!!!!!!!!!';
+  console.log(navigator);
 
   if ('serviceWorker' in navigator) {
     
