@@ -47,6 +47,8 @@
                         document.getElementById('syncstate').innerText = 'offline';
                       }
 
+                      document.getElementById('log').innerText = 'ボタン１実行！！';
+
                   // })
                   // .catch(console.error.bind(console));
                   }).catch(function(err) {
@@ -70,6 +72,9 @@
                       }else{
                         document.getElementById('syncstate').innerText = 'offline';
                       }
+
+                      document.getElementById('log').innerText = 'ボタン２実行！！';
+
                     })
                     .catch(console.error.bind(console));
                 }, false);

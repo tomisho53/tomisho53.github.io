@@ -34,6 +34,14 @@ h1 {
   font-size: 3rem;
   flex-grow: 1;
 }
+#log {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-grow: 1;
+}
 
 .btns {
   width: 100%;
