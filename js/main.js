@@ -1,7 +1,7 @@
 {
   'use strict'
 
-  document.getElementById('log').innerText = '!!!!!!!!!';
+  document.getElementById('log').innerText = navigator.serviceWorker;
   console.log(navigator.serviceWorker);
 
   if ('serviceWorker' in navigator) {
