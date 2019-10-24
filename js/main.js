@@ -23,6 +23,14 @@
                 // 初回以降は2番目に実行される
                 console.log('ServiceWorker ready complate!!');
 
+      
+                // 接続状態設定
+                if (navigator.onLine){
+                  document.getElementById('syncstate').innerText = 'online!!!!!!';
+                }else{
+                  document.getElementById('syncstate').innerText = 'offline!!!!!!';
+                }
+
                 // クリックイベント登録
                 // sync1
                 document.getElementById('sync1').addEventListener('click', () => {
