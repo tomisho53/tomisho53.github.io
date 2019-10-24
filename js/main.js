@@ -2,6 +2,9 @@
   'use strict'
 
   if ('serviceWorker' in navigator) {
+    
+    document.getElementById('log').innerText = 'SUCCESS!!!';
+
     // ServiceWorker スクリプトの読込
     navigator.serviceWorker.register('../serviceworker.js').then(function(registration) {
       // 初回起動時に2番目に実行される
@@ -82,6 +85,8 @@
       }).catch(console.error.bind(console));
 
     }).catch(function(err) {
+      document.getElementById('log').innerText = 'ERROR!!!';
+      
       console.log('ServiceWorker registration failed: ', err);
     });
   }
