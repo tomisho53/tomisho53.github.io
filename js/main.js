@@ -102,6 +102,7 @@
 
   // Notification 対応確認
   if ("Notification" in window){
+    document.getElementById('log').innerText = 'Notification';
 
     var permission = Notification.permission;
     console.log(Notification.permission);
@@ -118,6 +119,7 @@
 
   } else {
     // Notification 非対応
+    document.getElementById('log').innerText = 'Notification Error!!';
   }
 
 }
