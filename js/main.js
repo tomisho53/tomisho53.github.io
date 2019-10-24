@@ -41,6 +41,7 @@
                   }else{
                     document.getElementById('syncstate').innerText = 'offline';
                   }
+                  document.getElementById('log').innerText = 'STA!!!!';
 
                   // 保存が終わったら、↓を呼ぶ
                   registration.sync.register('sync1')
