@@ -49,7 +49,7 @@
                     .then(() => {
                       // sync登録に成功した場合の処理
                       console.log('sync1 registerd');
-                      document.getElementById('log').innerText = 'sync1 registerd success';
+                      // document.getElementById('log').innerText = 'sync1 registerd success';
                   })
                     .catch(() => {
                       document.getElementById('log').innerText = 'sync1 registerd error';
