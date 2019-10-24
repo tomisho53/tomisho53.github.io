@@ -54,6 +54,8 @@
                   });
                   // .catch(console.error.bind(console));
 
+                  document.getElementById('log').innerText = 'END!!!!';
+
                 }, false);
 
                 // sync2
