@@ -1,7 +1,7 @@
 // 参考:https://developers.google.com/web/fundamentals/primers/service-workers/?hl=ja
 // 参考:https://murashun.jp/blog/20171210-01.html
 
-var CACHE_NAME = 'pwa-my-study-01';
+var CACHE_NAME = 'pwa-my-study-02';
 // リソースファイル
 // オフラインでも動作するようにローカルに保存する対象
 var urlsToCache = [
