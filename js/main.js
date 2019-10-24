@@ -52,11 +52,11 @@
                       // document.getElementById('log').innerText = 'sync1 registerd success';
                   })
                     .catch(() => {
-                      document.getElementById('log').innerText = 'sync1 registerd error';
+                      // document.getElementById('log').innerText = 'sync1 registerd error';
                   });
                   // .catch(console.error.bind(console));
 
-                  document.getElementById('log').innerText = 'END!!!!';
+                  // document.getElementById('log').innerText = 'END!!!!';
 
                 }, false);
 
