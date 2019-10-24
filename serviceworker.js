@@ -92,17 +92,18 @@ self.addEventListener('fetch', e => {
 });
 
 // オンラインになると実行される
-self.addEventListener('sync', e => {
-  console.log('sync');
-  switch (e.tag) {
-    case 'sync1':
-      console.log('sync1 exec!!');
-      break;
-    case 'sync2':
-      console.log('sync2 exec!!');
-      break;
-    default:
-      console.log('default exec!!');
-      break;
-  }
-});
+// 2019/10/24 iOS Safari 非対応
+// self.addEventListener('sync', e => {
+//   console.log('sync');
+//   switch (e.tag) {
+//     case 'sync1':
+//       console.log('sync1 exec!!');
+//       break;
+//     case 'sync2':
+//       console.log('sync2 exec!!');
+//       break;
+//     default:
+//       console.log('default exec!!');
+//       break;
+//   }
+// });

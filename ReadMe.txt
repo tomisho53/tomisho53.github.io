@@ -40,3 +40,5 @@ http://tomisho53.github.io
 [object SyncManager]
  -> 現時点（2019/10/24） Safari未対応
  -> https://caniuse.com/#search=service%20worker%20sync
+[object ServiceWorker]
+ -> iOS Safariのみ対応

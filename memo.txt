@@ -11,6 +11,10 @@
     - タグ名が同一の場合は複数実行されても1回のみの実行となる
   - オフライン処理は処理登録の前にIndexedDBに登録し、 
     'sync' で実際に処理されたタイミングでIndexedDBを読込して実施
+  - 2019/10/24
+    registration.sync は iOS Safari 非対応
+  - navigator.onLine で onLine/offLine の 判断は可能
+    - IndexedDBと併せて回避は出来そう
 
 ○ バックグラウンド処理
   - 
