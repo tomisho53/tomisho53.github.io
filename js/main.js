@@ -1,6 +1,8 @@
 {
   'use strict'
 
+  document.getElementById('log').innerText = '!!!!!!!!!';
+
   if ('serviceWorker' in navigator) {
     
     document.getElementById('log').innerText = 'SUCCESS!!!';
@@ -86,7 +88,7 @@
 
     }).catch(function(err) {
       document.getElementById('log').innerText = 'ERROR!!!';
-      
+
       console.log('ServiceWorker registration failed: ', err);
     });
   }
