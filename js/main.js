@@ -4,6 +4,7 @@
   // document.getElementById('log').innerText = navigator.serviceWorker;
   // console.log(navigator.serviceWorker);
 
+  // ServiceWorker 対応確認
   if ('serviceWorker' in navigator) {
     
     // document.getElementById('log').innerText = 'SUCCESS!!!';
@@ -94,6 +95,29 @@
 
       console.log('ServiceWorker registration failed: ', err);
     });
+  } else {
+    // ServiceWorker 非対応
+
+  }
+
+  // Notification 対応確認
+  if ("Notification" in window){
+
+    var permission = Notification.permission;
+    console.log(Notification.permission);
+    if (permission === "denied" || permission === "granted") {
+      // return;
+    } else {
+      Notification
+        .requestPermission()
+        .then(function() {
+          console.log(Notification.permission);
+          var notification = new Notification("Hello!!");
+        });
+    }
+
+  } else {
+    // Notification 非対応
   }
 
 }
