@@ -40,6 +40,8 @@
                       // sync登録に成功した場合の処理
                       console.log('sync1 registerd');
                       
+                      document.getElementById('log').innerText = 'ボタン１－１実行！！';
+
                       // 接続状態設定
                       if (navigator.onLine){
                         document.getElementById('syncstate').innerText = 'online';
@@ -47,7 +49,7 @@
                         document.getElementById('syncstate').innerText = 'offline';
                       }
 
-                      document.getElementById('log').innerText = 'ボタン１実行！！';
+                      document.getElementById('log').innerText = 'ボタン１－２実行！！';
 
                   // })
                   // .catch(console.error.bind(console));
@@ -66,6 +68,8 @@
                       // sync登録に成功した場合の処理
                       console.log('sync2 registerd');
 
+                      document.getElementById('log').innerText = 'ボタン２－１実行！！';
+
                       // 接続状態設定
                       if (navigator.onLine){
                         document.getElementById('syncstate').innerText = 'online';
@@ -73,7 +77,7 @@
                         document.getElementById('syncstate').innerText = 'offline';
                       }
 
-                      document.getElementById('log').innerText = 'ボタン２実行！！';
+                      document.getElementById('log').innerText = 'ボタン２－２実行！！';
 
                     })
                     .catch(console.error.bind(console));
