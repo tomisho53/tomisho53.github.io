@@ -34,51 +34,41 @@
                 // クリックイベント登録
                 // sync1
                 document.getElementById('sync1').addEventListener('click', () => {
+                  document.getElementById('log').innerText = 'ボタン１－１実行！！';
+                  // 接続状態設定
+                  if (navigator.onLine){
+                    document.getElementById('syncstate').innerText = 'online';
+                  }else{
+                    document.getElementById('syncstate').innerText = 'offline';
+                  }
+                  document.getElementById('log').innerText = 'ボタン１－２実行！！';
+
                   // 保存が終わったら、↓を呼ぶ
                   registration.sync.register('sync1')
                     .then(() => {
                       // sync登録に成功した場合の処理
                       console.log('sync1 registerd');
-                      
-                      document.getElementById('log').innerText = 'ボタン１－１実行！！';
-
-                      // 接続状態設定
-                      if (navigator.onLine){
-                        document.getElementById('syncstate').innerText = 'online';
-                      }else{
-                        document.getElementById('syncstate').innerText = 'offline';
-                      }
-
-                      document.getElementById('log').innerText = 'ボタン１－２実行！！';
-
-                  // })
-                  // .catch(console.error.bind(console));
-                  }).catch(function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                    document.getElementById('syncstate').innerText = err;
-                  });
-
+                  })
+                  .catch(console.error.bind(console));
                 }, false);
 
                 // sync2
                 document.getElementById('sync2').addEventListener('click', () => {
+                  
+                  document.getElementById('log').innerText = 'ボタン２－１実行！！';
+                  // 接続状態設定
+                  if (navigator.onLine){
+                    document.getElementById('syncstate').innerText = 'online';
+                  }else{
+                    document.getElementById('syncstate').innerText = 'offline';
+                  }
+                  document.getElementById('log').innerText = 'ボタン２－２実行！！';
+                  
                   // 保存が終わったら、↓を呼ぶ
                   registration.sync.register('sync2')
                     .then(() => {
                       // sync登録に成功した場合の処理
                       console.log('sync2 registerd');
-
-                      document.getElementById('log').innerText = 'ボタン２－１実行！！';
-
-                      // 接続状態設定
-                      if (navigator.onLine){
-                        document.getElementById('syncstate').innerText = 'online';
-                      }else{
-                        document.getElementById('syncstate').innerText = 'offline';
-                      }
-
-                      document.getElementById('log').innerText = 'ボタン２－２実行！！';
-
                     })
                     .catch(console.error.bind(console));
                 }, false);
