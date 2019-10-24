@@ -41,8 +41,8 @@
                   }else{
                     document.getElementById('syncstate').innerText = 'offline';
                   }
-                  console.log(registration.sync);
-                  document.getElementById('log').innerText = registration.sync;
+                  console.log(registration);
+                  document.getElementById('log').innerText = registration;
 
                   // 保存が終わったら、↓を呼ぶ
                   registration.sync.register('sync1')
