@@ -8,6 +8,13 @@
       // 初回以降は1番目に実行される
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
       
+      // 接続状態設定
+      if (navigator.onLine){
+        document.getElementById('syncstate').innerText = 'online';
+      }else{
+        document.getElementById('syncstate').innerText = 'offline';
+      }
+
       // navigator.serviceWorker.ready -> ServiceWorker が activeになるまでコードの実行を遅らせる
       navigator.serviceWorker.ready
               .then((registration) => {
