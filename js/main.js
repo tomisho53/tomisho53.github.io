@@ -100,7 +100,7 @@
 
   }
 
-  // Notification 対応確認
+  // Notification（通知） 対応確認
   if ("Notification" in window){
     document.getElementById('log').innerText = 'Notification';
 
@@ -109,9 +109,11 @@
     if (permission === "denied" || permission === "granted") {
       // return;
     } else {
+      // 通知確認
       Notification
         .requestPermission()
         .then(function() {
+          // 通知
           console.log(Notification.permission);
           var notification = new Notification("Hello!!");
         });
@@ -119,6 +121,7 @@
 
   } else {
     // Notification 非対応
+    // 2019/10/25 iOS Safari 非対応
     document.getElementById('log').innerText = 'Notification Error!!';
   }
 

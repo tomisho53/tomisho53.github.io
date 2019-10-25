@@ -1,9 +1,13 @@
 # TIMLink 技術検証
-○ GPS取得
+○ GPS取得 -> 可能
   - geolocation を 使用して可能
 
-○ オフライン処理
+○ オフライン処理 -> 一部可能
   - Service Worker の 機能で可能
+  - リソース（html/css/js/画像等）をキャッシュに保持しておく事が可能
+  - 初回起動時にキャッシュ保存
+  - オフライン時でもキャッシュを利用して画面制御可能
+
   - registration.sync.register(タグ名) で処理を登録
   - self.addEventListener の 'sync' で実際の処理を記載する
     - 処理の登録後にオンラインであればすぐに 'sync' の処理が実行される
@@ -11,12 +15,14 @@
     - タグ名が同一の場合は複数実行されても1回のみの実行となる
   - オフライン処理は処理登録の前にIndexedDBに登録し、 
     'sync' で実際に処理されたタイミングでIndexedDBを読込して実施
+
   - 2019/10/24
     registration.sync は iOS Safari 非対応
   - navigator.onLine で onLine/offLine の 判断は可能
     - IndexedDBと併せて回避は出来そう
 
-○ バックグラウンド処理
+○ バックグラウンド処理 -> 不可
   - 
 
-○ プッシュ通知
+○ プッシュ通知 -> 不可
+  - Notification は iOS Safari では利用不可
