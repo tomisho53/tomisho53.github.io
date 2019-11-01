@@ -34,15 +34,6 @@
                 // 接続状態設定
                 if (navigator.onLine){
                   document.getElementById('syncstate').innerText = 'Online';
-                  // Fetch API 呼出
-                  fetch('https://jsonplaceholder.typicode.com/users')
-                    .then((res) => res.json())
-                    .then((users) => {
-                      for(let i=0; i < users.length; i++){
-                        console.log(users[i].name);
-                      }
-                    })
-                    .catch()
                 }else{
                   document.getElementById('syncstate').innerText = 'Offline';
                 }
@@ -54,6 +45,17 @@
                   // 接続状態設定
                   if (navigator.onLine){
                     document.getElementById('syncstate').innerText = 'Online';
+                    
+                    // Fetch API 呼出
+                    fetch('https://jsonplaceholder.typicode.com/users')
+                      .then((res) => res.json())
+                      .then((users) => {
+                        for(let i=0; i < users.length; i++){
+                          console.log(users[i].name);
+                        }
+                      })
+                      .catch()
+
                   }else{
                     document.getElementById('syncstate').innerText = 'Offline';
                   }
