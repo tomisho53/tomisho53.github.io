@@ -8,9 +8,16 @@
     <!-- PWAのmanifest.json -->
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Vue.js / axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
   </head>
   <body>
+
     <div class="wrapper">
+
       <h1>PWA Sample</h1>
       <div class="btns">
         <button id="sync1" class="btn">sync1</button>
@@ -19,6 +26,10 @@
       <div id="syncstate"></div>
       <div id="log">Nothing</div>
 
+    </div>
+
+    <div id="app">
+      {{ info }}
     </div>
 
     <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
