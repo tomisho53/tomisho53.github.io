@@ -126,7 +126,7 @@
   }
 
   // Vue
-  new Vue({
+  let vm = new Vue({
     el: '#app',
     data() {
       return {
@@ -139,5 +139,7 @@
         .then(response => (this.info = response))
     }
   })
+
+  console.log(vm);
 
 }
