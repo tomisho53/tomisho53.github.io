@@ -45,13 +45,14 @@
                   // 接続状態設定
                   if (navigator.onLine){
                     document.getElementById('syncstate').innerText = 'Online';
-                    
+
                     // Fetch API 呼出
                     fetch('https://jsonplaceholder.typicode.com/users')
                       .then((res) => res.json())
                       .then((users) => {
                         for(let i=0; i < users.length; i++){
                           console.log(users[i].name);
+                          document.getElementById('syncstate').innerText = users[i].name;
                         }
                       })
                       .catch()
