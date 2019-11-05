@@ -157,6 +157,8 @@
   // Geolocation API
   // var watchID;
   if (navigator.geolocation) {
+  
+    console.log("Geolocation Get!!");
 
     // 現在の位置情報を取得
     // watchID = navigator.geolocation.watchPosition(
@@ -182,7 +184,6 @@
         location += "<li>" + "速度：" + pos.coords.speed + "</li>";
 
         document.getElementById("location").innerHTML = location;
-        console.log("Geolocation Get!!");
 
         // //Google Mapsで住所を取得
         // var geocoder = new google.maps.Geocoder();
