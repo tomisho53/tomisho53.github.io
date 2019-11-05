@@ -228,7 +228,7 @@
         console.log(e);
         console.log("Geolocation Error");
 
-        document.getElementById("location").innerHTML = location;
+        document.getElementById("location").innerHTML = e.message;
       },
 
       { enableHighAccuracy: true }
