@@ -182,6 +182,7 @@
         location += "<li>" + "速度：" + pos.coords.speed + "</li>";
 
         document.getElementById("location").innerHTML = location;
+        console.log("Geolocation Get!!");
 
         // //Google Mapsで住所を取得
         // var geocoder = new google.maps.Geocoder();
