@@ -222,9 +222,13 @@
         // console.log('End : 位置情報取得成功処理');
 
       },
+
+      // 位置情報取得がエラーとなった場合
       function (e) {
         console.log(e);
         console.log("Geolocation Error");
+
+        document.getElementById("location").innerHTML = location;
       },
 
       { enableHighAccuracy: true }
