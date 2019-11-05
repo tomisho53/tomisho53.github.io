@@ -1,6 +1,7 @@
 # TIMLink 技術検証
 ○ GPS取得 -> 可能
-  - geolocation を 使用して可能
+  - 利用API
+    Geolocation API
 
 ○ オフライン処理 -> 一部可能
   - Service Worker の 機能で可能
@@ -25,4 +26,7 @@
   - 
 
 ○ プッシュ通知 -> 不可
+  - 利用API
+    Notification API
+    Push API
   - Notification は iOS Safari では利用不可
