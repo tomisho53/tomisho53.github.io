@@ -222,8 +222,11 @@
         // console.log('End : 位置情報取得成功処理');
 
       },
+      function (e) {
+        console.log(e);
+        console.log("Geolocation Error");
+      },
 
-      null,
       { enableHighAccuracy: true }
 
     );
