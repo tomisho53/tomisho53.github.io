@@ -1,7 +1,21 @@
 # TIMLink 技術検証
 ○ GPS取得 -> 可能
   - 利用API
-    Geolocation API
+
+ Geolocation API を使用して、以下の情報を取得可能
+
+  latitude 現在位置の緯度。
+  longitude　現在位置の経度。
+  altitude 現在位置の高度。メートル単位。
+  accuracy 取得した緯度、経度の精度。メートル単位。
+  altitudeAccuracy 取得した高度の精度。メートル単位。
+  heading 方角。0〜360の角度で表す。0が北、90が東、180が南、270が西。
+  speed　速度。メートル/秒数。位置情報を追跡する場合に使用。
+
+ 上記の情報からGoogle APIを利用して、
+  住所取得（逆ジオコーディング）
+  マップ表示
+ 等が可能となる。
 
 ○ オフライン処理 -> 一部可能
   - Service Worker の 機能で可能
@@ -30,3 +44,4 @@
     Notification API
     Push API
   - Notification は iOS Safari では利用不可
+

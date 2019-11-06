@@ -140,16 +140,51 @@
   // Vue
   let vm = new Vue({
     el: '#app',
-    data() {
-      return {
-        info: null
-      }
+    data: {
+      info: null
     },
+    // data() {
+    //   return {
+    //     info: null
+    //   }
+    // },
+
+    // created : DOMがまだ作成されていない状態
+    //  -> DOMに対しての操作ができない
+    //  -> dataオブジェクトは操作可能
+    // created() {
+
+    // }
+
+    // mounted : DOMが作成された直後に実行
+    //  -> DOMに対しての操作ができる
     mounted() {
+      // REST API 呼出
       axios
         .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-        .then(response => (this.info = response))
+        // .then(response => (this.info = response))
+        .then(response => {
+          this.info = response['data']['bpi']['USD']['rate'];
+        })
+    },
+
+    // メソッド
+    // テンプレートの中に記載すると、毎回処理されてしまう
+    //  -> 上記を回避する場合にcomputedを利用する
+    methods: {
+      // レート更新メソッド
+      updateBpiRate: function(){
+        // REST API 呼出
+        axios
+          .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+          // .then(response => (this.info = response))
+          .then(response => {
+            this.info = response['data']['bpi']['EUR']['rate'];
+          })
+      }
     }
+
+    //
   })
 
   console.log(vm);

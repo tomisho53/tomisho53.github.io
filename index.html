@@ -29,7 +29,11 @@
     </div>
 
     <div id="app">
-      {{ info }}
+      <p>{{ info }}</p>
+      <!-- [v-on:]ディレクティブ は [@]に省略可能 -->
+      <!-- <button v-on:click="updateBpiRate">Rate更新</button> -->
+      <!-- 中身はJavaScriptを直接記述可能 -->
+      <button @click="updateBpiRate">Rate更新</button>
     </div>
 
     <br>
