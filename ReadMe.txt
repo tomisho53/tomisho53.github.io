@@ -36,6 +36,9 @@ $ git remote set-url origin https://tomisho53@github.com/tomisho53/tomisho53.git
 http://tomisho53.github.io
 http://tomisho53.github.io/html5Lv2.html
 
+git add --all
+git commit -m "Initial commit"
+git push -u origin master
 
 [object ServiceWorkerRegistration]
 [object SyncManager]
