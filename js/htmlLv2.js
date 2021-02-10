@@ -35,5 +35,6 @@ const requestDeviceOrientationPermission = () => {
 }
 
 // ボタンクリックでrequestDeviceOrientationPermission実行
-const startButton = document.getElementById("start-button")
-startButton.addEventListener('click', requestDeviceOrientationPermission, false)
+const startButton = document.getElementById("start-button");
+console.log(startButton);
+startButton.addEventListener('click', requestDeviceOrientationPermission, false);
