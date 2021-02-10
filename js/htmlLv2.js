@@ -10,6 +10,7 @@ const requestDeviceOrientationPermission = () => {
     DeviceOrientationEvent &&
     typeof DeviceOrientationEvent.requestPermission === 'function'
   ) {
+    alert("上記");
     // iOS 13+ の Safari
     // 許可を取得
     DeviceOrientationEvent.requestPermission()
@@ -29,6 +30,7 @@ const requestDeviceOrientationPermission = () => {
     .catch(console.error) // https通信でない場合などで許可を取得できなかった場合
   } else {
     // 上記以外のブラウザ
+    alert("上記以外");
   }
 }
 
