@@ -34,6 +34,7 @@ $ git remote set-url origin https://tomisho53@github.com/tomisho53/tomisho53.git
 	- push時にパスワード入力
 
 http://tomisho53.github.io
+http://tomisho53.github.io/html5Lv2.html
 
 
 [object ServiceWorkerRegistration]
