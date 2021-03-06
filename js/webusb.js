@@ -148,7 +148,7 @@ startButton.addEventListener('click', async () => {
     //   protocolCode: 0x01
     // }]});
     const filters = [
-      {vendorId: 0x054c, productId: 0x01}
+      // {vendorId: 0x054c, productId: 0x01}
     ];
     device = await navigator.usb.requestDevice({filters: filters});
     console.log("open");
