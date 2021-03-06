@@ -19,7 +19,7 @@ $ git clone https://github.com/tomisho53/tomisho53.github.io
 
 ○ Git リポジトリ コミット
 $ git add --all
-$ git commit -m "Initial commit"
+$ c
 
 ○ Git プッシュ
 $ git push -u origin master

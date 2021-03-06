@@ -143,10 +143,11 @@ async function session(device) {
 startButton.addEventListener('click', async () => {
   let device;
   try {
-    device = await navigator.usb.requestDevice({ filters: [{
-      vendorId: 0x054c,
-      protocolCode: 0x01
-    }]});
+    // device = await navigator.usb.requestDevice({ filters: [{
+    //   vendorId: 0x054c,
+    //   protocolCode: 0x01
+    // }]});
+    device = await navigator.usb.requestDevice();
     console.log("open");
     await device.open();
   } catch (e) {
